@@ -1,0 +1,19 @@
+<div class="example-container">
+    <h2>Registration Form</h2>
+    <div>
+    <mat-form-field appearance="fill">
+        <mat-label>Enter your Name</mat-label>
+        <input matInput placeholder="please enter your email" [formControl]="name" required>
+        <mat-error *ngIf="name.invalid">{{nameErrorMessage()}}</mat-error>
+      </mat-form-field>
+    </div>
+    <div>
+    <mat-form-field appearance="fill">
+      <mat-label>Enter your email</mat-label>
+      <input matInput placeholder="please enter your email" [formControl]="email" required>
+      <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+    </mat-form-field>
+   </div>
+
+        <button mat-raised-button color="primary" [disabled]=options.invalid>Submit</button>
+  </div>
